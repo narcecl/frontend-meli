@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Search.module.scss';
+import searchIcon from '../../../assets/images/ic_Search@2x.png';
 
 export interface SearchProps {
     value: string;
@@ -27,6 +28,9 @@ export const Search = (props: SearchProps) => {
                 className={styles.MeliSearch__button}
                 aria-label="Buscar"
                 type="submit"
+                style={{
+                    background: `#eee url('${searchIcon.src}') center / 18px no-repeat`
+                }}
             />
         </form>
     );

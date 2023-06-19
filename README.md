@@ -1,6 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Desafio técnico Front-end Mercado Libre
 
-## Getting Started
+This guide explains how to use this app powered by:
+- [NextJS](https://nextjs.org/) - The React Framework for the Web
+- [React](https://react.dev/) - The library for web and native user interfaces.
+- [Storybook](https://react.dev/) - A front-end workshop for building UI components and pages in isolation.
 
 First, run the development server:
 
@@ -12,23 +15,28 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+And just open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Useful commands
+- `npm run dev` - Run the application in development mode (enabling hot-reload, error reporting and more).
+- `npm run build` - Creates an optimized production build of your application.
+- `npm run start` - Starts the application in production mode (the application should be compiled with next build first).
+- `npm run storybook` - Run storybook locally.
+- `npm run test` - Run unit test for UI components.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Files and folders structure
+This section provides an overview of the file and folder structure of a Next.js project. It covers top-level files and folders, configuration files, and routing conventions within the app and pages directories.
 
-## Learn More
+#### Files
+- `next.config.js` - Configuration file for Next.js.
+- `.env` - Environment variables.
+- `.next-env.d.ts` - TypeScript declaration file for Next.js.
+- `package.json` - Project dependencies and scripts.
+- `.gitignore` - Git files and folders to ignore.
+- `tsconfig.json` - Configuration file for TypeScript.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Folders
+- `app`	- App Router.
+- `app/pages` - Pages Router.
+- `assets` - Project core dependencies.
+- `public` - Static assets to be served.

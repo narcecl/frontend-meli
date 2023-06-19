@@ -10,6 +10,7 @@
         color: #333;
         font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif, sans-serif;
         border-radius: 4px;
+        box-sizing: border-box;
 
         &:focus, &:focus-within{
             outline: 1px solid #3483fa;
@@ -24,7 +25,6 @@
         height: 100%;
         border: none;
         cursor: pointer;
-        background: #eee url('/images/ic_Search@2x.png') center / 18px no-repeat;
         border-radius: 0 4px 4px 0;
     }
 }

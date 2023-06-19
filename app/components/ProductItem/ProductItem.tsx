@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from './ProductItem.module.scss';
 import { ProductItemProps } from '../../types/ProductItem.types';
 import { formatCurrency } from '../../utils/helpers';
+import freeShipping from '../../../assets/images/ic_shipping@2x.png';
 
 export const ProductItem = (props: ProductItemProps) => {
     const { id, title, price, picture, free_shipping, address } = props;
@@ -26,7 +27,7 @@ export const ProductItem = (props: ProductItemProps) => {
                                     free_shipping &&
                                     <picture>
                                         <img
-                                            src="/images/ic_shipping@2x.png"
+                                            src={freeShipping.src}
                                             alt="Despacho gratis"
                                             title="Despacho gratis"
                                             width={18}
