@@ -1,0 +1,53 @@
+html{
+    font-size: 1em;
+}
+
+p{
+    font-size: 1em;
+    line-height: 1.35;
+    color: #666;
+}
+
+.title{
+    &--small{
+        font-size: 1.125em;
+    }
+    &--medium{
+        font-size: 1.5em;
+        line-height: 1.2;
+    }
+    &--large{
+        font-size: 1.75em;
+        line-height: 1.2;
+    }
+    &--xlarge{
+        font-size: 2.875em;
+    }
+}
+
+.body{
+    &--xsmall{
+        font-size: 0.75em;
+    }
+    &--small{
+        font-size: 0.875em;
+    }
+    &--medium{
+        font-size: 1.125em;
+    }
+}
+
+.text{
+    &--muted{
+        color: #666;
+    }
+    &--default{
+        color: #333;
+    }
+}
+
+.fw{
+    &--semibold{
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,37 @@
+.button{
+    border-radius: 6px;
+    display: inline-block;
+    font-family: 'Proxima Nova', -apple-system, Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: block;
+    transition: all .3s ease;
+
+    &--primary{
+        background: #3483fa;
+        color: #fff;
+
+        &:hover{
+            background: #2968c8;
+        }
+    }
+
+    &--secondary{
+        background: rgba(65,137,230,.15);
+        color: #3483fa;
+
+        &:hover{
+            background: rgba(65,137,230,.2);
+        }
+    }
+
+    &--full{
+        width: 100%;
+    }
+}

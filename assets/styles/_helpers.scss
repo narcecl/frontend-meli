@@ -1,0 +1,323 @@
+// Global Helpers
+
+@use "sass:math";
+
+body{
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+video{
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+.cursor{
+	&--pointer{cursor:pointer;}
+	&--default{cursor:default;}
+	&--disabled{cursor: not-allowed;}
+}
+
+figure, picture{
+	margin:0;
+	padding:0;
+
+	&.hidden--caption{
+		figcaption{display: none;}
+	}
+
+	&.full{
+		img, canvas{width:100%;display:block;height:auto;}
+	}
+	&.rounded{
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	img, canvas{max-width:100%;height:auto;}
+}
+
+.text{
+	&-lowercase, &-lwc{text-transform: lowercase !important}
+	&-uppercase, &-upc{text-transform: uppercase !important}
+	&-capitalize, &-cap{text-transform: capitalize !important}
+	
+	&-left{text-align: left !important}
+	&-right{text-align: right !important}
+	&-center{text-align:center !important}
+	&-justify{text-align:justify !important}
+
+	@media (min-width: $break-sm){
+		&-sm-left{text-align: left !important}
+		&-sm-right{text-align: right !important}
+		&-sm-center{text-align:center !important}
+		&-sm-justify{text-align:justify !important}
+	}
+
+	@media (min-width: $break-md){
+		&-md-left{text-align: left !important}
+		&-md-right{text-align: right !important}
+		&-md-center{text-align:center !important}
+		&-md-justify{text-align:justify !important}
+	}
+
+	@media (min-width: $break-lg){
+		&-lg-left{text-align: left !important}
+		&-lg-right{text-align: right !important}
+		&-lg-center{text-align:center !important}
+		&-lg-justify{text-align:justify !important}
+	}
+
+	@media (min-width: $break-xl){
+		&-xl-left{text-align: left !important}
+		&-xl-right{text-align: right !important}
+		&-xl-center{text-align:center !important}
+		&-xl-justify{text-align:justify !important}
+	}
+}
+
+.center{
+	margin:0 auto;
+}
+
+.v-align{
+	&-baseline{vertical-align:baseline;}
+	&-sub{vertical-align:sub;}
+	&-super{vertical-align:super;}
+	&-top{vertical-align:top;}
+	&-text-top{vertical-align:text-top;}
+	&-middle{vertical-align:middle;}
+	&-bottom{vertical-align:bottom;}
+	&-text-bottom{vertical-align:text-bottom;}
+	&-initial{vertical-align:initial;}
+}
+
+.position{
+	&-fixed{position:fixed;}
+	&-absolute{position:absolute;}
+	&-relative{position:relative;}
+	&-static{position:static;}
+}
+
+.overflow{
+	&-hidden{overflow:hidden;}
+	&-scroll{overflow:scroll;}
+	&-visible{overflow:visible;}
+	&-auto{overflow:auto;}
+}
+
+.visible{visibility: visible;}
+.invisible{visibility: hidden;}
+
+// Fuentes
+$max: 100;
+$step: 2;
+@for $i from 2 through ceil(math.div($max, $step)){
+	$value: $i * $step;
+	.f-#{$value}{ font-size:#{$value}px; }
+}
+
+$max: 100;
+$pm_max: 72;
+$step_4: 4;
+$step_5: 5;
+$step_10: 10;
+
+.w-auto{width:auto !important;}
+.h-auto{height:auto !important;}
+
+@for $i from 0 through ceil(math.div($max, $step_5)) {
+	$value: $i * $step_5;
+	.w-#{$value}{width: 0% + $value}
+	.h-#{$value}{height: 0% + $value}
+}
+
+
+// Flex gap
+@for $i from 0 through ceil(math.div($max, $step_4)) {
+	$value: $i * $step_4;
+	.gap-#{$value}{gap: #{$value}px;}
+	.gap-#{$value}{gap: #{$value}px;}
+}
+
+
+// Margenes / Paddings
+.py-0{padding-top:0 !important;padding-bottom: 0 !important;}
+.px-0{padding-left:0 !important;padding-right: 0 !important;}
+.my-auto{margin-top:auto !important;margin-bottom: auto !important;}
+.mx-auto{margin-left:auto !important;margin-right: auto !important;}
+.my-0{margin-top:0 !important;margin-bottom: 0 !important;}
+.mx-0{margin-left:0 !important;margin-right: 0 !important;}
+
+@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
+	$value: $i * $step_4;
+	// Padding
+	.py-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
+	.px-#{$value}{ padding-left: #{$value}px; padding-right: #{$value}px; }
+	.p-#{$value}{ padding: #{$value}px; }
+	.pt-#{$value}{ padding-top: #{$value}px; }
+	.pb-#{$value}{ padding-bottom: #{$value}px; }
+	.pr-#{$value}{ padding-right: #{$value}px; }
+	.pl-#{$value}{ padding-left: #{$value}px; }
+
+	// Margin
+	.my-#{$value}{ margin-top: #{$value}px; margin-bottom: #{$value}px; }
+	.mx-#{$value}{ margin-left: #{$value}px; margin-right: #{$value}px; }
+	.m-#{$value}{ margin: #{$value}px; }
+	.mt-#{$value}{ margin-top: #{$value}px; }
+	.mb-#{$value}{ margin-bottom: #{$value}px; }
+	.mr-#{$value}{ margin-right: #{$value}px; }
+	.ml-#{$value}{ margin-left: #{$value}px; }
+}
+
+@media (min-width: $break-sm) {
+	// SM
+	.py-sm-0{padding-top:0;padding-bottom: 0;}
+	.px-sm-0{padding-left:0;padding-right: 0;}
+	.my-sm-auto{margin-top:auto;margin-bottom: auto;}
+	.mx-sm-auto{margin-left:auto;margin-right: auto;}
+	.my-sm-0{margin-top:0;margin-bottom: 0;}
+	.mx-sm-0{margin-left:0;margin-right: 0;}
+
+	@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
+		$value: $i * $step_4;
+		// Padding
+		.py-sm-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
+		.px-sm-#{$value}{ padding-left: #{$value}px; padding-right: #{$value}px; }
+		.p-sm-#{$value}{ padding: #{$value}px; }
+		.pt-sm-#{$value}{ padding-top: #{$value}px; }
+		.pb-sm-#{$value}{ padding-bottom: #{$value}px; }
+		.pr-sm-#{$value}{ padding-right: #{$value}px; }
+		.pl-sm-#{$value}{ padding-left: #{$value}px; }
+
+		// Margin
+		.my-sm-#{$value}{ margin-top: #{$value}px; margin-bottom: #{$value}px; }
+		.mx-sm-#{$value}{ margin-left: #{$value}px; margin-right: #{$value}px; }
+		.m-sm-#{$value}{ margin: #{$value}px; }
+		.mt-sm-#{$value}{ margin-top: #{$value}px; }
+		.mb-sm-#{$value}{ margin-bottom: #{$value}px; }
+		.mr-sm-#{$value}{ margin-right: #{$value}px; }
+		.ml-sm-#{$value}{ margin-left: #{$value}px; }
+	}
+
+	.w-sm-auto{width:auto !important;}
+	@for $i from 0 through ceil(math.div($max, $step_5)) {
+		$value: $i * $step_5;
+		.w-sm-#{$value}{width: 0% + $value !important;}
+		.h-sm-#{$value}{height: 0% + $value !important;}
+	}
+}
+
+@media (min-width: $break-md) {
+	// MD
+	.py-md-0{padding-top:0;padding-bottom: 0;}
+	.px-md-0{padding-left:0;padding-right: 0;}
+	.my-md-auto{margin-top:auto;margin-bottom: auto;}
+	.mx-md-auto{margin-left:auto;margin-right: auto;}
+	.my-md-0{margin-top:0;margin-bottom: 0;}
+	.mx-md-0{margin-left:0;margin-right: 0;}
+
+	@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
+		$value: $i * $step_4;
+		// Padding
+		.py-md-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
+		.px-md-#{$value}{ padding-left: #{$value}px; padding-right: #{$value}px; }
+		.p-md-#{$value}{ padding: #{$value}px; }
+		.pt-md-#{$value}{ padding-top: #{$value}px; }
+		.pb-md-#{$value}{ padding-bottom: #{$value}px; }
+		.pr-md-#{$value}{ padding-right: #{$value}px; }
+		.pl-md-#{$value}{ padding-left: #{$value}px; }
+
+		// Margin
+		.my-md-#{$value}{ margin-top: #{$value}px; margin-bottom: #{$value}px; }
+		.mx-md-#{$value}{ margin-left: #{$value}px; margin-right: #{$value}px; }
+		.m-md-#{$value}{ margin: #{$value}px; }
+		.mt-md-#{$value}{ margin-top: #{$value}px; }
+		.mb-md-#{$value}{ margin-bottom: #{$value}px; }
+		.mr-md-#{$value}{ margin-right: #{$value}px; }
+		.ml-md-#{$value}{ margin-left: #{$value}px; }
+	}
+
+	.w-md-auto{width:auto !important;}
+	@for $i from 0 through ceil(math.div($max, $step_5)) {
+		$value: $i * $step_5;
+		.w-md-#{$value}{width: 0% + $value !important;}
+		.h-md-#{$value}{height: 0% + $value !important;}
+	}
+}
+
+@media (min-width: $break-lg) {
+	// LG
+	.py-lg-0{padding-top:0;padding-bottom: 0;}
+	.px-lg-0{padding-left:0;padding-right: 0;}
+	.my-lg-auto{margin-top:auto;margin-bottom: auto;}
+	.mx-lg-auto{margin-left:auto;margin-right: auto;}
+	.my-lg-0{margin-top:0;margin-bottom: 0;}
+	.mx-lg-0{margin-left:0;margin-right: 0;}
+
+	@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
+		$value: $i * $step_4;
+		// Padding
+		.py-lg-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
+		.px-lg-#{$value}{ padding-left: #{$value}px; padding-right: #{$value}px; }
+		.p-lg-#{$value}{ padding: #{$value}px; }
+		.pt-lg-#{$value}{ padding-top: #{$value}px; }
+		.pb-lg-#{$value}{ padding-bottom: #{$value}px; }
+		.pr-lg-#{$value}{ padding-right: #{$value}px; }
+		.pl-lg-#{$value}{ padding-left: #{$value}px; }
+
+		// Margin
+		.my-lg-#{$value}{ margin-top: #{$value}px; margin-bottom: #{$value}px; }
+		.mx-lg-#{$value}{ margin-left: #{$value}px; margin-right: #{$value}px; }
+		.m-lg-#{$value}{ margin: #{$value}px; }
+		.mt-lg-#{$value}{ margin-top: #{$value}px; }
+		.mb-lg-#{$value}{ margin-bottom: #{$value}px; }
+		.mr-lg-#{$value}{ margin-right: #{$value}px; }
+		.ml-lg-#{$value}{ margin-left: #{$value}px; }
+	}
+
+	.w-lg-auto{width:auto !important;}
+	@for $i from 0 through ceil(math.div($max, $step_5)) {
+		$value: $i * $step_5;
+		.w-lg-#{$value}{width: 0% + $value !important;}
+		.h-lg-#{$value}{height: 0% + $value !important;}
+	}
+}
+
+@media (min-width: $break-xl) {
+	// XL
+	.py-xl-0{padding-top:0;padding-bottom: 0;}
+	.px-xl-0{padding-left:0;padding-right: 0;}
+	.my-xl-auto{margin-top:auto;margin-bottom: auto;}
+	.mx-xl-auto{margin-left:auto;margin-right: auto;}
+	.my-xl-0{margin-top:0;margin-bottom: 0;}
+	.mx-xl-0{margin-left:0;margin-right: 0;}
+
+	@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
+		$value: $i * $step_4;
+		// Padding
+		.py-xl-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
+		.px-xl-#{$value}{ padding-left: #{$value}px; padding-right: #{$value}px; }
+		.p-xl-#{$value}{ padding: #{$value}px; }
+		.pt-xl-#{$value}{ padding-top: #{$value}px; }
+		.pb-xl-#{$value}{ padding-bottom: #{$value}px; }
+		.pr-xl-#{$value}{ padding-right: #{$value}px; }
+		.pl-xl-#{$value}{ padding-left: #{$value}px; }
+
+		// Margin
+		.my-xl-#{$value}{ margin-top: #{$value}px; margin-bottom: #{$value}px; }
+		.mx-xl-#{$value}{ margin-left: #{$value}px; margin-right: #{$value}px; }
+		.m-xl-#{$value}{ margin: #{$value}px; }
+		.mt-xl-#{$value}{ margin-top: #{$value}px; }
+		.mb-xl-#{$value}{ margin-bottom: #{$value}px; }
+		.mr-xl-#{$value}{ margin-right: #{$value}px; }
+		.ml-xl-#{$value}{ margin-left: #{$value}px; }
+	}
+
+	.w-xl-auto{width:auto !important;}
+	@for $i from 0 through ceil(math.div($max, $step_5)) {
+		$value: $i * $step_5;
+		.w-xl-#{$value}{width: 0% + $value !important;}
+		.h-xl-#{$value}{height: 0% + $value !important;}
+	}
+}
