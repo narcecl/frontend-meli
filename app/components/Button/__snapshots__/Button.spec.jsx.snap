@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Default render 1`] = `
+<DocumentFragment>
+  <button
+    class="button button--primary"
+    type="button"
+  >
+    Button
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button Render with custom props 1`] = `
+<DocumentFragment>
+  <button
+    class="button button--secondary button--full"
+    type="button"
+  >
+    Button
+  </button>
+</DocumentFragment>
+`;

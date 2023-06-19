@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import author from '@/app/utils/author';
-import {  getProducts, getFormattedProductSearch, getBreadcrumb } from '@/app/utils/helpers';
+import { getProducts, getFormattedProductSearch, getBreadcrumb } from '@/app/utils/api';
 
 interface QueryProps {
 	url: URL;

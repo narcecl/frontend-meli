@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import author from '@/app/utils/author';
-import { getProductInfo, getProductDescription, getFormattedProductView, getBreadcrumbByCategory } from '@/app/utils/helpers';
+import { getProductInfo, getProductDescription, getFormattedProductView, getBreadcrumbByCategory } from '@/app/utils/api';
 import { NextApiResponse } from 'next';
 
 interface paramsProps extends NextApiResponse {

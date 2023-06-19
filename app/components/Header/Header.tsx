@@ -6,12 +6,12 @@ import { useSearchParams } from 'next/navigation';
 import styles from './Header.module.scss';
 import MercadoLibreLogo from '../../../assets/images/Logo_ML@2x.png';
 
-import SearchInput from '../Search/Search';
+import Search from '../Search/Search';
 
 export const Header = () => {
     const searchParams = useSearchParams();
-    const search = searchParams?.get('search');
-    const [ searchValue, setSearchValue ] = useState(search || '');
+    const search = searchParams?.get('search') || '';
+    const [ searchValue, setSearchValue ] = useState(search);
 
     return (
         <header className={styles.MeliHeader}>
@@ -23,7 +23,7 @@ export const Header = () => {
                         </picture>
                     </Link>
 
-                    <SearchInput
+                    <Search
                         value={searchValue}
                         onInput={setSearchValue}
                         placeholder="Nunca dejes de buscar"
