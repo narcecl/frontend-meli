@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Default render 1`] = `
+<DocumentFragment>
+  <form
+    action="/items"
+    class="MeliSearch"
+    method="GET"
+  >
+    <input
+      class="MeliSearch__input"
+      name="search"
+      placeholder="Nunca dejes de buscar"
+      value=""
+    />
+    <button
+      aria-label="Buscar"
+      class="MeliSearch__button"
+      type="submit"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Search Test onInput 1`] = `
+<DocumentFragment>
+  <form
+    action="/items"
+    class="MeliSearch"
+    method="GET"
+  >
+    <input
+      class="MeliSearch__input"
+      name="search"
+      placeholder="Nunca dejes de buscar"
+      value=""
+    />
+    <button
+      aria-label="Buscar"
+      class="MeliSearch__button"
+      type="submit"
+    />
+  </form>
+</DocumentFragment>
+`;

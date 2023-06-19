@@ -9,7 +9,6 @@ export const Breadcrumb = (props: BreadcrumbProps) => {
     const { items } = props;
 
     return (
-        items?.length ?
         <ol className={styles.breadcrumb}>
             { items.map((item, i) => 
                 <li key={i}>
@@ -18,7 +17,6 @@ export const Breadcrumb = (props: BreadcrumbProps) => {
                 </li>
             )}
         </ol>
-        : null
     );
 }
 

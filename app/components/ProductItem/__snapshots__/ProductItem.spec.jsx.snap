@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductItem Default render 1`] = `
+<DocumentFragment>
+  <div
+    class="MeliProductItem"
+  >
+    <div
+      class="d-flex gap-16"
+    >
+      <a
+        class="d-block"
+        href="items/MLA1149502467"
+      >
+        <picture>
+          <img
+            alt="Figura De Acción Tanjiro Kamado 49010 De Funko Pop! Animation"
+            src="http://http2.mlstatic.com/D_744432-MLA52222036808_102022-I.jpg"
+          />
+        </picture>
+      </a>
+      <div
+        class="MeliProductItem__content"
+      >
+        <div
+          class="w-100 w-sm-85 mb-32"
+        >
+          <div
+            class="d-flex align-items-center justify-content-between"
+          >
+            <div
+              class="d-flex align-items-center gap-8"
+            >
+              <span
+                class="title--medium text--default d-block"
+              >
+                $3.399
+              </span>
+            </div>
+            <p
+              class="body--small text--muted"
+            >
+              Capital Federal
+            </p>
+          </div>
+        </div>
+        <h2
+          class="body--medium text--default w-100 w-sm-50"
+        >
+          <a
+            class="d-inline-block"
+            href="items/MLA1149502467"
+          >
+            Figura De Acción Tanjiro Kamado 49010 De Funko Pop! Animation
+          </a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProductItem Render with free shipping prop 1`] = `
+<DocumentFragment>
+  <div
+    class="MeliProductItem"
+  >
+    <div
+      class="d-flex gap-16"
+    >
+      <a
+        class="d-block"
+        href="items/MLA1149502467"
+      >
+        <picture>
+          <img
+            alt="Figura De Acción Tanjiro Kamado 49010 De Funko Pop! Animation"
+            src="http://http2.mlstatic.com/D_744432-MLA52222036808_102022-I.jpg"
+          />
+        </picture>
+      </a>
+      <div
+        class="MeliProductItem__content"
+      >
+        <div
+          class="w-100 w-sm-85 mb-32"
+        >
+          <div
+            class="d-flex align-items-center justify-content-between"
+          >
+            <div
+              class="d-flex align-items-center gap-8"
+            >
+              <span
+                class="title--medium text--default d-block"
+              >
+                $3.399
+              </span>
+              <picture>
+                <img
+                  alt="Despacho gratis"
+                  title="Despacho gratis"
+                  width="18"
+                />
+              </picture>
+            </div>
+            <p
+              class="body--small text--muted"
+            >
+              Capital Federal
+            </p>
+          </div>
+        </div>
+        <h2
+          class="body--medium text--default w-100 w-sm-50"
+        >
+          <a
+            class="d-inline-block"
+            href="items/MLA1149502467"
+          >
+            Figura De Acción Tanjiro Kamado 49010 De Funko Pop! Animation
+          </a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

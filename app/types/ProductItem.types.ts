@@ -18,8 +18,3 @@ export interface ProductDetailsProps extends ProductItemProps{
     sold_quantity: number;
     description: string;
 }
-
-export interface ProductConditionsProps {
-    condition: string;
-    label: string;
-}

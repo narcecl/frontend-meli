@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders the header component with empty search value when URL params are not present 1`] = `
+<DocumentFragment>
+  <header
+    class="MeliHeader"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="d-flex align-items-center gap-16"
+      >
+        <a
+          href="/"
+        >
+          <picture>
+            <img
+              alt="Logo MercadoLibre"
+              width="48"
+            />
+          </picture>
+        </a>
+        <form
+          action="/items"
+          class="MeliSearch"
+          method="GET"
+        >
+          <input
+            class="MeliSearch__input"
+            name="search"
+            placeholder="Nunca dejes de buscar"
+            value=""
+          />
+          <button
+            aria-label="Buscar"
+            class="MeliSearch__button"
+            type="submit"
+          />
+        </form>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`Header renders the header component with search value from URL params 1`] = `
+<DocumentFragment>
+  <header
+    class="MeliHeader"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="d-flex align-items-center gap-16"
+      >
+        <a
+          href="/"
+        >
+          <picture>
+            <img
+              alt="Logo MercadoLibre"
+              width="48"
+            />
+          </picture>
+        </a>
+        <form
+          action="/items"
+          class="MeliSearch"
+          method="GET"
+        >
+          <input
+            class="MeliSearch__input"
+            name="search"
+            placeholder="Nunca dejes de buscar"
+            value="query"
+          />
+          <button
+            aria-label="Buscar"
+            class="MeliSearch__button"
+            type="submit"
+          />
+        </form>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
