@@ -3,8 +3,13 @@ interface MetadataProps {
     description?: string;
 }
 
+const defaultDescription = 'Compre productos con Envío Gratis en el día en Mercado Libre Chile. Encuentre miles de marcas y productos a precios increíbles.';
+
 export function getMetadata(props: MetadataProps){
-    const { title, description = '' } = props;
+    const {
+        title,
+        description = defaultDescription
+    } = props;
 
     return {
         title: `${title} | MercadoLibre 📦`,

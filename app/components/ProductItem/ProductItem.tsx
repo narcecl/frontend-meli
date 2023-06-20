@@ -13,7 +13,7 @@ export const ProductItem = (props: ProductItemProps) => {
             <div className="d-flex gap-16">
                 <Link href={`items/${id}`} className="d-block">
                     <picture>
-                        <img src={picture} alt={title} />
+                        <img src={picture} alt={title} width={18} height={18} />
                     </picture>
                 </Link>
                 <div className={styles.MeliProductItem__content}>

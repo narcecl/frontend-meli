@@ -4,7 +4,7 @@ import { getMetadata } from '@/app/utils/metadata';
 import styles from './single.module.scss';
 import Breadcrumb from '@/app/components/Breadcrumb/Breadcrumb';
 import Button from '@/app/components/Button/Button';
-import ErrorImage from '@/app/components/ErrorImage/ErrorImage';
+import ErrorImage from '@/assets/images/errorImage.svg';
 
 interface detailsProps {
     params: { id: string; },
@@ -88,9 +88,11 @@ export default async function ItemsDetails(props: detailsProps) {
                 <div className="container">
                     <div className="section--inner mt-16 p-32">
                         <div className="text-center">
-                            <ErrorImage />
+                            <picture className="mb-16">
+                                <img src={ErrorImage.src} alt="Error image" width={102} height={63} />
+                            </picture>
 
-                            <h2 className="mt-32 title--medium">Producto no encontrado</h2>
+                            <h2 className="title--medium">Producto no encontrado</h2>
                             <p>Parece que el producto que buscas no existe.</p>
                         </div>
                     </div>

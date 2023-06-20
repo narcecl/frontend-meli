@@ -15,7 +15,9 @@ exports[`ProductItem Default render 1`] = `
         <picture>
           <img
             alt="Figura De Acción Tanjiro Kamado 49010 De Funko Pop! Animation"
+            height="18"
             src="http://http2.mlstatic.com/D_744432-MLA52222036808_102022-I.jpg"
+            width="18"
           />
         </picture>
       </a>
@@ -75,7 +77,9 @@ exports[`ProductItem Render with free shipping prop 1`] = `
         <picture>
           <img
             alt="Figura De Acción Tanjiro Kamado 49010 De Funko Pop! Animation"
+            height="18"
             src="http://http2.mlstatic.com/D_744432-MLA52222036808_102022-I.jpg"
+            width="18"
           />
         </picture>
       </a>
