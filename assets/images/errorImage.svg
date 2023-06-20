@@ -1,6 +1,4 @@
-export const ErrorImage = () => {
-    return (
-        <svg aria-hidden={true} xmlns="http://www.w3.org/2000/svg" width="251" height="154" viewBox="0 0 251 154" data-reactid="8">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="251" height="154" viewBox="0 0 251 154" data-reactid="8">
               <g fill="none" fill-rule="evenodd" data-reactid="9">
                 <path fill="#CCCCCC" d="M18 151h233v2H18v-2zm-18 0h13v2H0v-2z" data-reactid="10"></path>
                 <path fill="#DFDFDF" d="M152 133v8.165h-50V133H28v8.165c0 5.52 3.405 11.827 13.647 11.835l168.906-.291C228.179 152.723 226.377 133 226 133h-74z" data-reactid="11"></path>
@@ -19,8 +17,4 @@ export const ErrorImage = () => {
                 </g>
                 <path fill="#CCCCCC" d="M126.321 96.605h4.914v5.136h-4.914v-5.136zm-5.309-28.358c2.009-2.165 4.766-3.247 8.272-3.247 3.243 0 5.84.926 7.79 2.778 1.95 1.852 2.926 4.218 2.926 7.099 0 1.744-.358 3.16-1.074 4.246-.716 1.087-2.16 2.684-4.333 4.79-1.58 1.531-2.605 2.828-3.074 3.89-.47 1.061-.704 2.63-.704 4.703h-4.395c0-2.354.28-4.25.84-5.691.559-1.44 1.785-3.09 3.678-4.95l1.976-1.951a8.174 8.174 0 0 0 1.432-1.754c.658-1.07.987-2.18.987-3.333 0-1.613-.481-3.012-1.444-4.197-.963-1.186-2.556-1.778-4.778-1.778-2.749 0-4.65 1.02-5.704 3.062-.592 1.135-.93 2.773-1.012 4.913H118c0-3.555 1.004-6.415 3.012-8.58z" data-reactid="24"></path>
               </g>
-        </svg>
-    );
-};
-
-export default ErrorImage;
+            </svg>

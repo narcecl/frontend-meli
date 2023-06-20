@@ -37,11 +37,11 @@ export default async function Item(pageProps: detailsProps){
 
 				<div className="section--inner p-16">
 					{ items?.length ?
-						<ul>
+						<div>
 							{ items.map((item: ProductItemProps, i: number) => 
 								<ProductItem key={i} {...item} />
 							)}
-						</ul>
+						</div>
 					: null }
 				</div>
 			</div>

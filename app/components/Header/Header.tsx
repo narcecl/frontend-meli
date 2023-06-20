@@ -19,7 +19,7 @@ export const Header = () => {
                 <div className="d-flex align-items-center gap-16">
                     <Link href="/">
                         <picture>
-                            <img src={MercadoLibreLogo.src} alt="Logo MercadoLibre" width={48} />
+                            <img src={MercadoLibreLogo.src} alt="Logo MercadoLibre" width={46} height={29} />
                         </picture>
                     </Link>
 

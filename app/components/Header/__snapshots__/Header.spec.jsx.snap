@@ -17,7 +17,8 @@ exports[`Header renders the header component with empty search value when URL pa
           <picture>
             <img
               alt="Logo MercadoLibre"
-              width="48"
+              height="29"
+              width="46"
             />
           </picture>
         </a>
@@ -61,7 +62,8 @@ exports[`Header renders the header component with search value from URL params 1
           <picture>
             <img
               alt="Logo MercadoLibre"
-              width="48"
+              height="29"
+              width="46"
             />
           </picture>
         </a>
